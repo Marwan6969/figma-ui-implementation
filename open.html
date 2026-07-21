@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>تسبيح</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;500;700;800&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="static/styles.css" />
+  </head>
+  <body>
+    <div class="app-shell">
+      <div class="hero-bg hero-bg-one"></div>
+      <div class="hero-bg hero-bg-two"></div>
+
+      <header class="progress-header">
+        <div class="progress-text">
+          <span id="progress-page">الصفحة 1 من 4</span>
+        </div>
+        <div class="pager" id="pager">
+          <span class="pager-dot active"></span>
+          <span class="pager-dot"></span>
+          <span class="pager-dot"></span>
+          <span class="pager-dot"></span>
+        </div>
+      </header>
+
+      <section class="screen" id="screen-1" data-page="1">
+        <div class="screen-card screen-card-large">
+          <p class="eyebrow">تسبيح</p>
+          <h1>ابدأ رحلتك الروحية</h1>
+          <p class="screen-description">تجربة تسبيح راقية مع واجهة أنيقة وشعور فخم.</p>
+          <div class="screen-highlight">
+            <span>صفحة البداية</span>
+          </div>
+        </div>
+      </section>
+
+      <section class="screen hidden" id="screen-2" data-page="2">
+        <div class="screen-card">
+          <p class="eyebrow">سبحان الله</p>
+          <h1>سبحان الله</h1>
+          <p class="screen-description">اضغط على الزر لتتبع العد حتى 33 والمضي قُدماً.</p>
+        </div>
+      </section>
+
+      <section class="screen hidden" id="screen-3" data-page="3">
+        <div class="screen-card">
+          <p class="eyebrow">الحمد لله</p>
+          <h1>الحمد لله</h1>
+          <p class="screen-description">استمر في العد واستمتع بلحظة تركيز وتوازن.</p>
+        </div>
+      </section>
+
+      <section class="screen hidden" id="screen-4" data-page="4">
+        <div class="screen-card">
+          <p class="eyebrow">الله أكبر</p>
+          <h1>الله أكبر</h1>
+          <p class="screen-description">اضغط حتى يصل العدد إلى 34 ثم أعد تشغيل الرحلة.</p>
+        </div>
+      </section>
+
+      <div class="counter-display hidden" id="counter-display">
+        <div>
+          <span>العدد</span>
+          <strong id="counter-value">0</strong>
+        </div>
+        <div class="counter-note">اضغط مع كل ذكر لتحديث العدد</div>
+      </div>
+
+      <div class="actions">
+        <button id="skip-btn" class="secondary-btn">التالي</button>
+        <button id="action-btn" class="primary-btn">ابدأ</button>
+      </div>
+    </div>
+
+    <script src="static/app.js"></script>
+  </body>
+</html>
