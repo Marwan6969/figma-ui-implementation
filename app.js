@@ -31,9 +31,15 @@ const pageConfig = {
   },
   4: {
     actionText: 'اضغط',
-    skipText: 'إعادة',
+    skipText: 'التالي',
     showCounter: true,
     counterLimit: 33,
+  },
+   5: {
+    actionText: 'تم',
+    skipText: 'اعاده',
+    showCounter: true,
+    counterLimit: 1,
   },
 };
 
@@ -44,10 +50,10 @@ function setScreen(page) {
 
   const config = pageConfig[page];
   actionBtn.textContent = config.actionText;
-  skipBtn.textContent = page === 4 ? 'إعادة' : 'التالي';
+  skipBtn.textContent = page === 5 ? 'إعاده' : 'التالي';
   skipBtn.style.display = config.showSkip ? 'inline-flex' : 'none';
   counterDisplay.classList.toggle('hidden', !config.showCounter);
-  progressPage.textContent = `الصفحة ${page} من 4`;
+  progressPage.textContent = `الصفحة ${page} من 5`;
   pagerDots.forEach((dot, index) => {
     dot.classList.toggle('active', index === page - 1);
   });
@@ -67,7 +73,7 @@ function advance() {
     if (limit > 0 && state.counter >= limit) {
       state.page += 1;
       state.counter = 0;
-      if (state.page > 4) {
+      if (state.page > 5) {
         state.page = 1;
       }
     }
@@ -78,7 +84,7 @@ function advance() {
 }
 
 function nextPage() {
-  state.page = state.page === 4 ? 1 : state.page + 1;
+  state.page = state.page === 5 ? 1 : state.page + 1;
   state.counter = 0;
   setScreen(state.page);
   updateCounter();
