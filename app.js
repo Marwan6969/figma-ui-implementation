@@ -33,7 +33,7 @@ const pageConfig = {
     actionText: 'اضغط',
     skipText: 'إعادة',
     showCounter: true,
-    counterLimit: 34,
+    counterLimit: 33,
   },
 };
 
