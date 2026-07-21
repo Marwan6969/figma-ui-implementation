@@ -1,143 +1,81 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ar" dir="rtl">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Northstar Studio</title>
+    <title>تسبيح</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
-      rel="stylesheet"
-    />
-    <link rel="stylesheet" href="styles.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;500;700;800&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="static/styles.css" />
   </head>
   <body>
-    <div class="bg-orb orb-one"></div>
-    <div class="bg-orb orb-two"></div>
+    <div class="app-shell">
+      <div class="hero-bg hero-bg-one"></div>
+      <div class="hero-bg hero-bg-two"></div>
 
-    <div class="page-shell">
-      <header class="topbar">
-        <a class="brand" href="#">Northstar</a>
-        <nav class="nav-links" aria-label="Primary">
-          <a href="#features">Features</a>
-          <a href="#insights">Insights</a>
-          <a href="#contact">Contact</a>
-        </nav>
-        <a class="nav-cta" href="#contact">Book a demo</a>
+      <header class="progress-header">
+        <div class="progress-text">
+          <span id="progress-page">الصفحة 1 من 4</span>
+        </div>
+        <div class="pager" id="pager">
+          <span class="pager-dot active"></span>
+          <span class="pager-dot"></span>
+          <span class="pager-dot"></span>
+          <span class="pager-dot"></span>
+        </div>
       </header>
 
-      <main>
-        <section class="hero">
-          <div class="hero-copy">
-            <p class="eyebrow">Launch-ready digital experiences</p>
-            <h1>Design systems that feel calm, clear, and unmistakably premium.</h1>
-            <p class="hero-text">
-              Bring strategy, motion, and product thinking together to create elegant interfaces that scale from concept to launch.
-            </p>
-            <div class="hero-actions">
-              <a class="primary-btn" href="#contact">Start your project</a>
-              <a class="secondary-btn" href="#features">Explore services</a>
-            </div>
-            <div class="chip-row">
-              <span>Rapid prototyping</span>
-              <span>Accessible UI</span>
-              <span>Product strategy</span>
-            </div>
+      <section class="screen" id="screen-1" data-page="1">
+        <div class="screen-card screen-card-large">
+          <p class="eyebrow">تسبيح</p>
+          <h1>ابدأ رحلتك الروحية</h1>
+          <p class="screen-description">تجربة تسبيح راقية مع واجهة أنيقة وشعور فخم.</p>
+          <div class="screen-highlight">
+            <span>صفحة البداية</span>
           </div>
+        </div>
+      </section>
 
-          <div class="hero-visual" aria-label="Product overview preview">
-            <div class="visual-card">
-              <div class="card-top">
-                <span class="pill">Live update</span>
-                <div class="dot-group">
-                  <span class="dot"></span>
-                  <span class="dot muted"></span>
-                  <span class="dot muted"></span>
-                </div>
-              </div>
+      <section class="screen hidden" id="screen-2" data-page="2">
+        <div class="screen-card">
+          <p class="eyebrow">سبحان الله</p>
+          <h1>سبحان الله</h1>
+          <p class="screen-description">اضغط على الزر لتتبع العد حتى 33 والمضي قُدماً.</p>
+        </div>
+      </section>
 
-              <div class="chart-panel">
-                <div class="chart-lines" aria-hidden="true">
-                  <span></span>
-                  <span></span>
-                  <span></span>
-                </div>
-                <div class="stat-grid">
-                  <div>
-                    <strong>+24%</strong>
-                    <span>Engagement</span>
-                  </div>
-                  <div>
-                    <strong>1.2k</strong>
-                    <span>New users</span>
-                  </div>
-                </div>
-              </div>
+      <section class="screen hidden" id="screen-3" data-page="3">
+        <div class="screen-card">
+          <p class="eyebrow">الحمد لله</p>
+          <h1>الحمد لله</h1>
+          <p class="screen-description">استمر في العد واستمتع بلحظة تركيز وتوازن.</p>
+        </div>
+      </section>
 
-              <div class="task-list">
-                <div class="task-item">
-                  <span class="check"></span>
-                  <p>Refine onboarding journey</p>
-                </div>
-                <div class="task-item">
-                  <span class="check"></span>
-                  <p>Ship polished motion patterns</p>
-                </div>
-                <div class="task-item">
-                  <span class="check"></span>
-                  <p>Review analytics weekly</p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </section>
+      <section class="screen hidden" id="screen-4" data-page="4">
+        <div class="screen-card">
+          <p class="eyebrow">الله أكبر</p>
+          <h1>الله أكبر</h1>
+          <p class="screen-description">اضغط حتى يصل العدد إلى 34 ثم أعد تشغيل الرحلة.</p>
+        </div>
+      </section>
 
-        <section class="stats-grid" id="insights">
-          <article>
-            <strong>4.9/5</strong>
-            <span>Client satisfaction</span>
-          </article>
-          <article>
-            <strong>120+</strong>
-            <span>Launches supported</span>
-          </article>
-          <article>
-            <strong>24/7</strong>
-            <span>Design support</span>
-          </article>
-        </section>
+      <div class="counter-display hidden" id="counter-display">
+        <div>
+          <span>العدد</span>
+          <strong id="counter-value">0</strong>
+        </div>
+        <div class="counter-note">اضغط مع كل ذكر لتحديث العدد</div>
+      </div>
 
-        <section class="features" id="features">
-          <div class="section-heading">
-            <p class="eyebrow">Why teams rely on us</p>
-            <h2>Thoughtful systems for ambitious products.</h2>
-          </div>
-
-          <div class="feature-grid">
-            <article class="feature-card">
-              <h3>Clear foundations</h3>
-              <p>Consistent structure and scalable patterns keep every experience intuitive.</p>
-            </article>
-            <article class="feature-card">
-              <h3>Measured motion</h3>
-              <p>Subtle transitions guide attention without overwhelming the product.</p>
-            </article>
-            <article class="feature-card">
-              <h3>Aligned collaboration</h3>
-              <p>Design, strategy, and engineering stay connected from kickoff to launch.</p>
-            </article>
-          </div>
-        </section>
-
-        <section class="cta-banner" id="contact">
-          <div>
-            <p class="eyebrow">Let’s build something memorable</p>
-            <h3>Ready to turn your next idea into a launch-ready experience?</h3>
-          </div>
-          <a class="primary-btn" href="mailto:hello@northstar.example">hello@northstar.example</a>
-        </section>
-      </main>
+      <div class="actions">
+        <button id="skip-btn" class="secondary-btn">التالي</button>
+        <button id="action-btn" class="primary-btn">ابدأ</button>
+      </div>
     </div>
+
+    <script src="static/app.js"></script>
   </body>
 </html>
+
