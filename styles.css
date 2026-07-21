@@ -4,7 +4,7 @@
   --accent: #54a8ff;
   --accent-2: #1d4ed8;
   --surface: #ffffff;
-  --text: ##ffffff;
+  --text: #2f54eb;
   --muted: #5c7197;
   --shadow: rgba(4, 20, 70, 0.22);
 }
@@ -23,7 +23,7 @@ body {
   font-family: "Tajawal", sans-serif;
   background: radial-gradient(circle at top left, rgba(84, 168, 255, 0.22), transparent 24%),
     radial-gradient(circle at bottom right, rgba(37, 99, 235, 0.18), transparent 32%),
-    linear-gradient(135deg, #081649 0%, #0f307b 42%, #1c5fff 100%);
+    linear-gradient(135deg, #081649 0%, #f6f8fa 42%, #1c5fff 100%);
   color: var(--text);
   display: flex;
   align-items: center;
